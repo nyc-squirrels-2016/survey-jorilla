@@ -1,0 +1,10 @@
+<form id="new-question-form" method="post" action="/surveys">
+
+  <label for="question[title]">Name</label>
+
+  <input type="text" name="question[question_text]" placeholder="Question?"><br>
+  <input type="hidden" name="question[survey_id]" value="<%= survey.id %>">
+  <%= :'/surveys_new_choice' %>
+  <input type="submit" value="Submit Question" class="button">
+
+</form>

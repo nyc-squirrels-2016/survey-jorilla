@@ -1,0 +1,9 @@
+<form id="new-answer-form" method="post" action="/surveys">
+
+  <label for="choice[title_text]">Choices</label>
+
+  <input type="text" name="choice[choice_text]"><br>
+  <input type="hidden" name="choice[question_id]" value="<%= question.id %>">
+  <input type="submit" value="Add Choice" class="button">
+
+</form>

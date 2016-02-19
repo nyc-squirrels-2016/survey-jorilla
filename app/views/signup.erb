@@ -1,0 +1,9 @@
+<div class="container">
+<h3>Create a new account:</h3>
+  <form method='post' action='/signup'>
+    <input type='text' name='user[username]' placeholder='Username'>
+    <input type='password' name='user[password]' placeholder='Password'>
+    <input type='submit' value='Create Account' class='button'>
+  </form>
+  <%= erb :'_errors' %>
+</div>

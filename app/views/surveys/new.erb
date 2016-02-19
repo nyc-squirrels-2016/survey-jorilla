@@ -1,1 +1,26 @@
-new.erb
+<div class="container">
+<h3>Create new survey</h3>
+<main class="form-wrapper" role="main">
+  <form method="POST" action="/surveys">
+    <input type="text" name="survey[title]" placeholder="Title"><br>
+    <input type="hidden" name="survey[user_id]" value="<%= current_user.id %>">
+    <%= erb :'surveys_new_question' %>
+    <input type="submit" value="Create Survey" class="button">
+  </form>
+  <%= erb :_errors %>
+</main>
+</div>
+
+
+<form role="form" action="/wohoo" method="POST">
+  <label>Stuff</label>
+    <div class="multi-field-wrapper">
+      <div class="multi-fields">
+        <div class="multi-field">
+          <input type="text" name="stuff[]">
+          <button type="button" class="remove-field">Remove</button>
+        </div>
+      </div>
+    <button type="button" class="add-field">Add field</button>
+  </div>
+</form>

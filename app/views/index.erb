@@ -1,0 +1,19 @@
+<div class="container">
+    <a href="/surveys/new" class="create button">Create new survey</a>
+</div>
+
+<div class="container">
+  <main role="main">
+    <ul class="all_surveys">
+      <% @surveys.each do |survey| %>
+        <li>
+          <a href="<%= "surveys/#{survey.id}" %>">
+            <%= survey.title %>
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </main>
+
+</div>
+

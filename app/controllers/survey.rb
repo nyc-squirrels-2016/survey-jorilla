@@ -26,11 +26,11 @@ end
 #   redirect '/'
 # end
 
-delete '/surveys' do
-  @survey = Survey.find(params[:id])
-  @survey.destroy
+# delete '/surveys' do
+#   @survey = Survey.find(params[:id])
+#   @survey.destroy
 
-  redirect '/'
-end
+#   redirect '/'
+# end
 
 

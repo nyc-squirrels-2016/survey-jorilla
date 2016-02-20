@@ -1,9 +1,7 @@
-<form class="new-question-form" method="post" action="/surveys">
+<form class="new-question-form" method="post" action="/questions">
 
   <input type="text" name="question[question_text]" placeholder="Question?"><br>
   <li><%= erb :'/surveys/_new_choice' %></li><br>
   <input type="submit" value="Submit Question" class="button">
 
 </form>
-
-

@@ -16,9 +16,11 @@ post '/surveys' do
   redirect "/surveys/#{@survey.id}/questions/new"
 end
 
-# get '/surveys/:id' do
-#   erb :'/surveys/show_take_survey'
-# end
+
+get '/surveys/:id' do
+  @questions = Question.where(survey_id: params[:id])
+  erb :'/surveys/show'
+end
 
 # get '/surveys/edit' do
 #   @survey = Survey.find_by(params[:id])

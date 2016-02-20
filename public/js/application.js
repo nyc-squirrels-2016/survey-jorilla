@@ -7,4 +7,18 @@ $(document).ready(function() {
 
 
 
+
+
+  $('.question-field-wrapper').each(function() {
+      var $wrapper = $('.question-fields', this);
+      $(".add-field", $(this)).click(function(e) {
+          $('.question-field:first-child', $wrapper).clone(true).appendTo($wrapper).find('input').val('').focus();
+      });
+      $('.question-field .remove-field', $wrapper).click(function() {
+          if ($('.question-field', $wrapper).length > 1)
+              $(this).parent('.question-field').remove();
+      });
+  });
+
+
 });

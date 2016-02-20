@@ -1,3 +1,11 @@
 <%  @questions.each do |question| %>
   <li><%= question.question_text %></li>
+  <% question.choices.each do |c| %>
+  <form method="post" action='/answers'/>
+    <input type="radio" name="answer" value="<%=c.id%>"/><%=c.choice_text%>
+    <input type='submit' name='value'/>
+  </form>
+
+
+  <% end %>
 <% end %>

@@ -9,10 +9,10 @@ get '/surveys/:id/questions/new' do
   erb :'/questions/new'
 end
 
-post '/questions' do
-  @survey = Survey.find(params['question_text']['survey_id'])
+post '/surveys/:id/questions' do
+  @survey = Survey.find(params[:id])
   Question.new(params['question'])
-  erb :'/questions/index'
+  redirect "/surveys/#{@survey.id}/questions/new"
 end
 
 # delete '/questions' do

@@ -1,6 +1,13 @@
 <form class="new-question-form" method="post" action="/surveys/<%=@survey.id%>/questions">
   <input type="text" name="question[question_text]" placeholder="Question?"><br>
   <input type="hidden" name="question[survey_id]" value="<%=@survey.id%>"><br>
+  <div class="choice-field">
+    <input type="text" name="choice[]"><br>
+    <input type="text" name="choice[]"><br>
+  </div>
+  <button type="button" class="add-field">Add choice</button>
+
   <input type="submit" value="Submit Question" class="button">
 </form>
 <a href='/'>finish survey</a>
+

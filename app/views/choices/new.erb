@@ -1,6 +1,0 @@
-<form class="new-choice-form" method="post" action="/surveys/<%=@survey.id%>/questions/<%=@question.id%>/choices">
-    <input type="text" name="choice[choice_text]" placeholder="Choice?"><br>
-    <input type="hidden" name="choice[question_id]" value="<%=@question.id%>"><br>
-    <input type="submit" value="Submit Choice" class="button">
-</form>
-<a href='/'>finish survey</a>

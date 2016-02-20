@@ -1,19 +1,14 @@
 <div class="container">
-<form method="POST" role="form" action="/surveys">
-  <h3>Create new survey</h3>
+<h3>Create new survey</h3>
+<main class="form-wrapper" role="main">
+  <form method="POST" action="/surveys">
     <input type="text" name="survey[title]" placeholder="Survey Title"><br>
     <input type="hidden" name="survey[user_id]" value="<%= current_user.id %>"><br>
-    <div class="question-field-wrapper">
-      <div class="question-fields">
-        <div class="question-field">
-          <input type="text" name="stuff[]">
-          <button type="button" class="remove-field">Remove questions</button>
-        </div>
-      </div>
-    <button type="button" class="add-field">Add question</button>
-  </div>
-  <br>
-  <input type="submit" value="Start creating survey" class="button">
-</form>
-<%= erb :_errors %>
+    <input type="submit" value="Start creating survey" class="button">
+  </form>
+  <%= erb :_errors %>
+</main>
 </div>
+
+
+

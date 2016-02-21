@@ -5,10 +5,6 @@
   <h3><%= s.title %></h3>
 <% end %>
 
-<h2>Surveys You've Taken</h2>
-<% @user.answers.each do |a| %>
-  <p><%= a.survey.title %></p>
-  <% a.survey.questions.each do |s| %>
-    <p><%= s.question_text %> - <%= a.choice.choice_text %></p>
-  <% end %>
-<% end %>
+
+
+

@@ -1,17 +1,38 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+var choice =
+'<br><input class="choice-input" type="text" name="choice[]"><br>'
 
-  $(".add-choice").click(function(){
-    // var newInput = $(document.createElement("choice-field"))
-    // var newInput = $("choices[]");
-    $(".choice-field").clone(true).appendTo(".choice-input");
+$('.add-choice').click(function(event){
+  event.preventDefault();
+  $(".choice-field").append(choice);
 
-  });
-
-
+  })
 
 });
+
+
+
+  // $('.choice-form').each(function() {
+      // var $wrapper = $('.choice-fields', this);
+      // $(".add-field", $(this)).click(function(e) {
+      //     $('.choice-field:first-child', $wrapper).clone(true).appendTo($wrapper).find('input').val('').focus();
+      // });
+      // $('.choice-field .remove-field', $wrapper).click(function() {
+      //     if ($('.choice-field', $wrapper).length > 1)
+      //         $(this).parent('.choice-field').remove();
+      // });
+  // });
+
+  // $('.multi-field-wrapper').each(function() {
+  //     var $wrapper = $('.multi-fields', this);
+  //     $(".add-field", $(this)).click(function(e) {
+  //         $('.multi-field:first-child', $wrapper).clone(true).appendTo($wrapper).find('input').val('');
+  //     });
+  //     $('.multi-field .remove-field', $wrapper).click(function() {
+  //         if ($('.multi-field', $wrapper).length > 1)
+  //             $(this).parent('.multi-field').remove();
+  //     });
+  // });
+
+

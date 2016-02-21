@@ -4,7 +4,7 @@
   <form method="POST" action="/surveys">
     <input type="text" name="survey[title]" placeholder="Survey Title"><br>
     <input type="hidden" name="survey[user_id]" value="<%= current_user.id %>"><br>
-    <input type="submit" value="Start creating survey" class="button">
+    <input type="submit" value="Create Survey" class="button">
   </form>
   <%= erb :_errors %>
 </main>

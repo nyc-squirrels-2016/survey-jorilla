@@ -1,12 +1,15 @@
 <form class="new-question-form" method="post" action="/surveys/<%=@survey.id%>/questions">
   <input type="text" name="question[question_text]" placeholder="Question?"><br>
   <input type="hidden" name="question[survey_id]" value="<%=@survey.id%>"><br>
-    <div class="choice-field">
-      <input type="text" name="choice[]">
-      <button type="button" class="remove-field">Remove</button>
-    </div>
-  <button type="button" class="add-choice">Add choice</button><br>
+  <div class="choice-field">
+    <input class="choice-input" type="text" name="choice[]">
+    <button type="button" class="remove-choice">Remove Choice</button><br>
+  </div>
+  <button type="button" class="add-choice">Add Choice</button><br>
   <input type="submit" value="Submit Question" class="button">
 </form>
-<a href='/'>finish survey</a>
+
+<form action="/">
+    <input type="submit" value="Finish Survey">
+</form>
 

@@ -37,8 +37,8 @@ h2, h3, h4 {
 /* Colors */
 
 html {
-  background-color: #fff;   /* medium gray */
-  color: #ddd;              /* dark gray */
+  background-color: #fff;
+  color: #ddd;
 }
 
 body,
@@ -47,14 +47,14 @@ header nav input[type="submit"] {
 }
 
 main {
-  background-color: #4e2a16;   /* light gray */
-  color: #222;              /* dark gray */
+  background-color: #4e2a16;
+  color: #222;
 }
 
 a:link,
 a:visited,
 header nav input[type="submit"] {
-  color: #fff;           /* darker contrasting color; inactive links */
+  color: #fff;
   font-weight: bold;
   text-decoration: none;
 }
@@ -73,17 +73,20 @@ header nav li {
 main table,
 main th,
 main td {
-  border: 1px solid #222;         /* match body background-color */
+  border: 1px solid #4e2a16;;         /* match body background-color */
   background-color: #eee;         /* lighter than main background-color */
 }
 
 
 /* HEADER STYLES */
 
-header { padding: 1rem; }
+header {
+  padding: 1rem;
+
+   }
 
 header h1 {
-  margin: 0 0 1rem;
+  margin: 0 0 1 2rem;
   font-size: 3rem;
   float: left;
   border-radius: 10px
@@ -154,11 +157,15 @@ main table {
   margin-bottom: 1rem;
 }
 
-main th,
+main th {
+  ;
+}
 main td {
+  color:black;
   padding: 0.25rem 0;
   width: 25%;
-  text-align: center;
+  text-align: left;
+  background-color: #4e2a16;
 }
 
 
@@ -170,10 +177,12 @@ footer {
   padding: 1rem;
 }
 
+#logo {
 
-.container{
-    background-color: -webkit-linear-gradient(#00592D, white); /* For Safari 5.1 to 6.0 */
-    background-color: -o-linear-gradient(#00592D, white); /* For Opera 11.1 to 12.0 */
-    background-color: -moz-linear-gradient(#00592D, white); /* For Firefox 3.6 to 15 */
-    background-color: linear-gradient(#00592D, white); /* St
+width:300px;
+margin-left: auto;
+    margin-right: auto;
 }
+
+
+

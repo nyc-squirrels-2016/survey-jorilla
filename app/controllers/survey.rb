@@ -3,7 +3,7 @@
 # end
 
 get '/surveys' do
-  @surveys = Survey.all
+  # @surveys = Survey.all
   erb :index
 end
 

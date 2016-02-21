@@ -1,19 +1,23 @@
 <div class="container">
-    <a href="/surveys/new" class="create button">Create new survey</a>
+    <a href="/surveys/new" class="create button">Create New Survey</a>
 </div>
-<a href='users/index'>Your Profile</a>
 
 <div class="container">
   <main role="main">
-    <ul class="all_surveys">
-      <% @surveys.each do |survey| %>
-        <li>
-          <a href="<%= "surveys/#{survey.id}" %>">
-            <%= survey.title %>
-          </a>
-        </li>
-      <% end %>
-    </ul>
+    <table class="all_surveys">
+      <tr>
+        <td>Surveys</td>
+      </tr>
+        <% @surveys.each do |survey| %>
+      <tr>
+        <td>
+            <a href="<%= "surveys/#{survey.id}" %>">
+              <%= survey.title %>
+            </a>
+        </td>
+      </tr>
+        <% end %>
+    </table>
   </main>
 
 </div>

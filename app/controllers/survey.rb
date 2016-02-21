@@ -8,12 +8,18 @@ get '/surveys' do
 end
 
 get '/surveys/new' do
-  erb :'survey/new'
+  erb :'/surveys/new'
 end
 
 post '/surveys' do
   @survey = Survey.create(params['survey'])
-  redirect '/'
+  redirect "/surveys/#{@survey.id}/questions/new"
+end
+
+
+get '/surveys/:id' do
+  @questions = Question.where(survey_id: params[:id])
+  erb :'/surveys/show'
 end
 
 # get '/surveys/edit' do

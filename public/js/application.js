@@ -1,14 +1,16 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
+   var choice =
+   // '<div class="choice-field">',
+   '<input class="choice-input" type="text" name="choice[]"><br>'
+   // '</div>'
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
-
-  $(".add-choice").click(function(){
+  $(".add-choice").click(function(event){
+    event.preventDefault();
+    // debugger;
     // var newInput = $(document.createElement("choice-field"))
     // var newInput = $("choices[]");
-    $(".choice-field").clone(true).appendTo(".choice-input");
+    $(".choice-field").append(choice);
+
 
   });
 

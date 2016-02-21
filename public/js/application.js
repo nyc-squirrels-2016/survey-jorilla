@@ -8,7 +8,6 @@ $(document).ready(function() {
 
   $(".individual-question").on('submit', function(e) {
     e.preventDefault();
-    var count = 1
     var request = $.ajax({
       method: "POST",
       url: e.target.action,

@@ -6,6 +6,11 @@ $(document).ready(function() {
     $(".choice-field").append(choice);
   });
 
+  // $('remove-field').click(function(e){
+  //   // if ($(".choice-field")).length > 1)
+  //   $(".choice-field").remove();
+  // });
+
   $(".individual-question").on('submit', function(e) {
     e.preventDefault();
     var request = $.ajax({
@@ -18,3 +23,4 @@ $(document).ready(function() {
     });
   });
 });
+

@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
   var choice = '<input class="choice-input" type="text" name="choice[]"><br>'
 
   $(".add-choice").click(function(e){
@@ -23,4 +24,5 @@ $(document).ready(function() {
     });
   });
 });
+
 

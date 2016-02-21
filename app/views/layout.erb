@@ -20,7 +20,9 @@
 <body>
   <div id="header">
   <header role="banner">
+
       <a href='/'>Home</a>
+
       <% if logged_in? %>
         <a href='/users/index'>Profile</a>
         <a href='/logout'>Logout</a>
@@ -28,6 +30,7 @@
         <a href='/signup'>Sign Up</a>
         <a href='/login'>Log In</a>
       <% end %>
+       <div id="logo"><img src="/jorilla.png"></div>
   </header>
   <h1>SURVEY JORILLA</h1></a>
   <%= yield %>

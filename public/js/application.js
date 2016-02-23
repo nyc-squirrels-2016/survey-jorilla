@@ -1,16 +1,15 @@
 $(document).ready(function() {
 
-  var choice = '<input class="choice-input" type="text" name="choice[]"><br>'
+  var choice = '<p><input class="choice-input" type="text" name="choice[]"></p>'
 
-  $(".add-choice").click(function(e){
+  $(".add-choice").on("click", function(e){
     e.preventDefault();
-    $(".choice-field").append(choice);
+    $(".choice-form").append(choice);
   });
 
-  // $('remove-field').click(function(e){
-  //   // if ($(".choice-field")).length > 1)
-  //   $(".choice-field").remove();
-  // });
+  $('.remove-choice').on("click", function(e){
+    $('.choice-form').children().last().remove();
+  });
 
   $(".individual-question").on('submit', function(e) {
     e.preventDefault();

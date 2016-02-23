@@ -1,0 +1,7 @@
+<%  @questions.each do |question| %>
+  <br><li><%= question.question_text %></li>
+  <% question.answers.each do |ans| %>
+    <%= Choice.find_by(id: ans.choice_id).choice_text %>
+    <!-- I KNOW LINE 4 IS NOT THE BEST WAY TO DO THIS -->
+  <% end %>
+<% end %>

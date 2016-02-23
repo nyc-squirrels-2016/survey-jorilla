@@ -19,7 +19,8 @@ end
 
 get '/surveys/:id' do
   @questions = Question.where(survey_id: params[:id])
-  if Answer.exists?(survey_id: params[:id])
+  # if Answer.exists?(survey_id: params[:id])
+  if Answer.find_by(survey_id: params[:id]).user_id == current_user.id
     @answers = Answer.where(survey_id: params[:id])
     @choices = Choice.where(survey_id: params[:id])
     erb :'/surveys/results'

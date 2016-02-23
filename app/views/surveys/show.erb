@@ -1,0 +1,9 @@
+<%  @questions.each do |question| %>
+  <br><li><%= question.question_text %></li>
+  <% question.choices.each do |c| %>
+  <form class="individual-question" method="post" action='/answers'/>
+    <br><input class="input" type="radio" name="answer" value="<%=c.id%>"/><%=c.choice_text%>
+  <% end %>
+    <br><input type='submit' name='value'/><br>
+  </form>
+<% end %>

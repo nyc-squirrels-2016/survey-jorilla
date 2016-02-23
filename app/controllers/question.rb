@@ -12,8 +12,9 @@ post '/surveys/:id/questions' do
   @question = Question.create(params[:question])
   # binding.pry
   @choices_array = params[:choice]
+    # binding.pry
   @choices_array.each do |text|
-    Choice.create(choice_text: text, question_id: @question.id)
+    Choice.create(choice_text: text, question_id: @question.id, survey_id: @survey.id)
   end
   # @choice = Choice.create(choice_text: params[:choice_text], question_id: @question.id)
   redirect "/surveys/#{@survey.id}/questions/new"

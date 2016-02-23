@@ -19,7 +19,7 @@ end
 
 get '/surveys/:id' do
   @questions = Question.where(survey_id: params[:id])
-  if Answer.exists?(user_id: session[:user_id])
+  if Answer.exists?(survey_id: params[:id])
     @answers = Answer.where(survey_id: params[:id])
     @choices = Choice.where(survey_id: params[:id])
     erb :'/surveys/results'
